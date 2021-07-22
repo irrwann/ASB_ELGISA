@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+    <record id="list_inherit_res_partner" model="ir.ui.view">
+      <field name="name">res.partner.view.list.inherit</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_tree"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='display_name']" position="attributes">
+          <attribute name="invisible">True</attribute>
+        </xpath>
+        <xpath expr="//field[@name='parent_id']" position="attributes">
+          <attribute name="invisible">True</attribute>
+        </xpath>
+        <xpath expr="//field[@name='phone']" position="before">
+          <field name="name"/>
+        </xpath>
+        <xpath expr="//field[@name='name']" position="after">
+          <field name="parent_id"/>
+        </xpath>
+        <xpath expr="//field[@name='parent_id']" position="attributes">
+          <attribute name="string">Company</attribute>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
