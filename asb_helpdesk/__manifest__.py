@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {    
- 'name': "Contacts Custom",
+ 'name': "Helpdesk Custom",
 
     'summary': """
         Custom tree contacts""",
